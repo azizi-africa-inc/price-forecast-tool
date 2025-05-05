@@ -20,31 +20,11 @@ const PRODUCTS = [
 
 // ADDED: Default price values by product
 const PRODUCT_DEFAULT_PRICES = {
-  // "rosecoco-beans": {
-  //   wholesale_price_lag1: 120,
-  //   wholesale_price_lag2: 115,
-  //   wholesale_price_rolling_avg: 118,
-  // },
-  // "pishori-rice": {
-  //   wholesale_price_lag1: 130,
-  //   wholesale_price_lag2: 125,
-  //   wholesale_price_rolling_avg: 128,
-  // },
   groundnuts: {
     wholesale_price_lag1: 250,
     wholesale_price_lag2: 220,
     wholesale_price_rolling_avg: 243,
   },
-  // sorghum: {
-  //   wholesale_price_lag1: 60,
-  //   wholesale_price_lag2: 58,
-  //   wholesale_price_rolling_avg: 59,
-  // },
-  // millet: {
-  //   wholesale_price_lag1: 70,
-  //   wholesale_price_lag2: 68,
-  //   wholesale_price_rolling_avg: 69,
-  // },
   "green-grams": {
     wholesale_price_lag1: 125,
     wholesale_price_lag2: 125,
@@ -52,7 +32,7 @@ const PRODUCT_DEFAULT_PRICES = {
   },
 }
 
-// ADDED: Default fallback prices if product not found
+// // ADDED: Default fallback prices if product not found
 const DEFAULT_PRICES = {
   wholesale_price_lag1: 100,
   wholesale_price_lag2: 95,
@@ -120,9 +100,9 @@ const formSchema = z.object({
     .number({ required_error: "Please enter a year" })
     .min(2000, "Year must be after 2000")
     .max(2100, "Year must be before 2100"),
-  wholesale_price_lag1: z.number().positive("Price must be positive").default(100),
-  wholesale_price_lag2: z.number().positive("Price must be positive").default(95),
-  wholesale_price_rolling_avg: z.number().positive("Price must be positive").default(97.5),
+  wholesale_price_lag1: z.number().positive("Price must be positive").optional(),
+  wholesale_price_lag2: z.number().positive("Price must be positive").optional(),
+  wholesale_price_rolling_avg: z.number().positive("Price must be positive").optional(),
 })
 
 type FormValues = z.infer<typeof formSchema>
@@ -158,9 +138,9 @@ export default function PriceForecastTool() {
       product_name: "",
       month: new Date().getMonth() + 1, // Current month
       year: new Date().getFullYear(),
-      wholesale_price_lag1: DEFAULT_PRICES.wholesale_price_lag1,
-      wholesale_price_lag2: DEFAULT_PRICES.wholesale_price_lag2,
-      wholesale_price_rolling_avg: DEFAULT_PRICES.wholesale_price_rolling_avg,
+      wholesale_price_lag1: undefined, // Default value
+      wholesale_price_lag2: undefined, // Default value
+      wholesale_price_rolling_avg: undefined, // Default value
     },
   })
 
