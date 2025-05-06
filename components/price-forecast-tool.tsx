@@ -21,9 +21,9 @@ const PRODUCTS = [
 // ADDED: Default price values by product
 const PRODUCT_DEFAULT_PRICES = {
   groundnuts: {
-    wholesale_price_lag1: 250,
-    wholesale_price_lag2: 220,
-    wholesale_price_rolling_avg: 243,
+    wholesale_price_lag1: 275,
+    wholesale_price_lag2: 250,
+    wholesale_price_rolling_avg: 248.3,
   },
   "green-grams": {
     wholesale_price_lag1: 125,
