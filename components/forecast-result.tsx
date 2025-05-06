@@ -87,7 +87,7 @@ export default function ForecastResult({ result, productName, month, year, marke
         </p>
       </div>
 
-      <div className="bg-white p-4 rounded-md border border-gray-200">
+      {/* <div className="bg-white p-4 rounded-md border border-gray-200">
         <h3 className="font-medium text-gray-700 mb-2">How to use this forecast:</h3>
         <ul className="list-disc list-inside text-gray-600 space-y-1">
           <li>Use this price as a benchmark when negotiating with suppliers</li>
@@ -95,7 +95,7 @@ export default function ForecastResult({ result, productName, month, year, marke
           <li>Compare with current spot prices to identify potential savings</li>
           <li>Consider market trends and seasonal variations in your planning</li>
         </ul>
-      </div>
+      </div> */}
     </div>
   )
 }
