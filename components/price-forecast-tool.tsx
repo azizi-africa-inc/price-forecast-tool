@@ -41,10 +41,10 @@ const DEFAULT_PRICES = {
 
 const COUNTIES = [
   { id: "bungoma", name: "Bungoma" },
-  { id: "kisumu", name: "Kisumu" },
-  { id: "kakamega", name: "Kakamega" },
-  { id: "kiambu", name: "Kiambu" },
-  { id: "busia", name: "Busia" },
+  // { id: "kisumu", name: "Kisumu" },
+  // { id: "kakamega", name: "Kakamega" },
+  // { id: "kiambu", name: "Kiambu" },
+  // { id: "busia", name: "Busia" },
 ]
 
 const MARKETS_BY_COUNTY = {
