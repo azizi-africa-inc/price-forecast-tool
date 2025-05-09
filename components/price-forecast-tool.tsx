@@ -189,7 +189,7 @@ export default function PriceForecastTool() {
     try {
       console.log("Submitting data:", data)
 
-      const response = await fetch("http://localhost:8000/predict", {
+      const response = await fetch("/api/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
