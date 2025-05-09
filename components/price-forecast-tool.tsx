@@ -189,7 +189,7 @@ export default function PriceForecastTool() {
     try {
       console.log("Submitting data:", data)
 
-      const response = await fetch("/api/predict", {
+      const response = await fetch("price-forecast-tool-9bmu.vercel.app/api/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
