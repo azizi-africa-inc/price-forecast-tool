@@ -24,7 +24,7 @@ app = FastAPI()
 origins = [
     "http://localhost:3000",  # Replace with your frontend's origin
     "http://localhost", # Add this line
-    "https://your-frontend-domain.com",  # Add your production frontend domain
+    "https://price-forecast-tool-9bmu.vercel.app/",  # Add your production frontend domain
     "*", # allow all origins
 ]
 
