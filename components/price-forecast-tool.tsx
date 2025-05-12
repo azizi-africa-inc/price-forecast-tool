@@ -189,7 +189,7 @@ export default function PriceForecastTool() {
     try {
       console.log("Submitting data:", data)
 
-      const response = await fetch("https://price-prediction.aziziafrica.com//predict", {
+      const response = await fetch("https://price-prediction.aziziafrica.com/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
