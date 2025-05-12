@@ -5,7 +5,8 @@ export async function POST(request: NextRequest) {
     const data = await request.json()
 
     // Forward the request to your FastAPI backend
-    const apiUrl = process.env.BACKEND_URL || "/api"
+    // const apiUrl = process.env.BACKEND_URL || "/api"
+    const apiUrl = "http://3.224.15.25"
     console.log("API URL:", apiUrl)
     const response = await fetch(`${apiUrl}/predict`, {
       method: "POST",
